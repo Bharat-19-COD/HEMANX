@@ -24,7 +24,7 @@ Pillow==10.4.0
 opencv-python-headless==4.10.0.84
 
 # PyTorch CPU-only (Windows, no CUDA)
-torch==2.4.1
+torch==2.2.0
 torchvision==0.19.1
 
 # Transformers (text emotion)
