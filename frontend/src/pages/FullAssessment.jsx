@@ -128,7 +128,7 @@ function FullAssessment() {
     const formData = new FormData(); formData.append('image', image);
     try {
       const token = localStorage.getItem('token');
-      const res = await axios.post('${import.meta.env.VITE_API_URL}/api/face/analyze', formData, { headers: { Authorization: `Bearer ${token}` } });
+      const res = await axios.post('https://hemanx-multimdal-ai-obit.onrender.com/api/face/analyze', formData, { headers: { Authorization: `Bearer ${token}` } });
       setFaceResult(res.data);
       setStep(2);
     } catch (err) { setError("Failed to analyze face."); }
@@ -141,7 +141,7 @@ function FullAssessment() {
     setLoading(true); setError('');
     try {
       const token = localStorage.getItem('token');
-      const res = await axios.post('${import.meta.env.VITE_API_URL}/api/text/analyze', { text }, { headers: { Authorization: `Bearer ${token}` } });
+      const res = await axios.post('https://hemanx-multimdal-ai-obit.onrender.com/api/text/analyze', { text }, { headers: { Authorization: `Bearer ${token}` } });
       setTextResult(res.data);
       setStep(3);
     } catch (err) { setError("Failed to analyze text."); }
@@ -192,7 +192,7 @@ function FullAssessment() {
     const formData = new FormData(); formData.append('audio', audioBlob, 'recording.wav');
     try {
       const token = localStorage.getItem('token');
-      const res = await axios.post('${import.meta.env.VITE_API_URL}/api/voice/analyze', formData, { headers: { Authorization: `Bearer ${token}` } });
+      const res = await axios.post('https://hemanx-multimdal-ai-obit.onrender.com/api/voice/analyze', formData, { headers: { Authorization: `Bearer ${token}` } });
       setVoiceResult(res.data);
       setStep(4);
     } catch (err) { setError("Failed to analyze voice."); }

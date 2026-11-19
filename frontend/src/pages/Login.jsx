@@ -53,8 +53,8 @@ function Login() {
     }
 
     const url = isLogin 
-      ? '${import.meta.env.VITE_API_URL}/api/auth/login' 
-      : '${import.meta.env.VITE_API_URL}/api/auth/register';
+      ? 'https://hemanx-multimdal-ai-obit.onrender.com/api/auth/login' 
+      : 'https://hemanx-multimdal-ai-obit.onrender.com/api/auth/register';
 
     try {
       const response = await axios.post(url, formData);

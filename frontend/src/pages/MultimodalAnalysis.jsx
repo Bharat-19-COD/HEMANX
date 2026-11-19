@@ -129,7 +129,7 @@ function MultimodalAnalysis() {
 
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.post('${import.meta.env.VITE_API_URL}/api/multimodal/analyze', formData, {
+      const response = await axios.post('https://hemanx-multimdal-ai-obit.onrender.com/api/multimodal/analyze', formData, {
         headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'multipart/form-data' }
       });
       setResult(response.data);

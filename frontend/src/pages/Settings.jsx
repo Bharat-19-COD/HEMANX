@@ -39,7 +39,7 @@ function Settings() {
 
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.put('${import.meta.env.VITE_API_URL}/api/auth/update-profile', formData, {
+      const response = await axios.put('https://hemanx-multimdal-ai-obit.onrender.com/api/auth/update-profile', formData, {
         headers: { Authorization: `Bearer ${token}` }
       });
       

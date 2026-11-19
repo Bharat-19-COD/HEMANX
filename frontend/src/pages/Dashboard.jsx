@@ -29,17 +29,17 @@ function Dashboard() {
       
       const fetchData = async () => {
         try {
-          const resHistory = await axios.get('${import.meta.env.VITE_API_URL}/api/history', {
+          const resHistory = await axios.get('https://hemanx-multimdal-ai-obit.onrender.com/api/history', {
             headers: { Authorization: `Bearer ${token}` }
           });
           setHistory(resHistory.data);
 
-          const resGraph = await axios.get(`${import.meta.env.VITE_API_URL}/api/history/graph?timeframe=${timeframe}`, {
+          const resGraph = await axios.get(`https://hemanx-multimdal-ai-obit.onrender.com/api/history/graph?timeframe=${timeframe}`, {
             headers: { Authorization: `Bearer ${token}` }
           });
           setGraphData(resGraph.data);
 
-          const resInsight = await axios.get('${import.meta.env.VITE_API_URL}/api/insights', {
+          const resInsight = await axios.get('https://hemanx-multimdal-ai-obit.onrender.com/api/insights', {
             headers: { Authorization: `Bearer ${token}` }
           });
           setInsight(resInsight.data);
@@ -70,7 +70,7 @@ function Dashboard() {
     setIsGeneratingPDF(true);
     try {
       const token = localStorage.getItem('token');
-      const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/report/data?timeframe=${timeframe}`, {
+      const res = await axios.get(`https://hemanx-multimdal-ai-obit.onrender.com/api/report/data?timeframe=${timeframe}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       

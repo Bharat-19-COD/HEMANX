@@ -21,7 +21,7 @@ function Recommendations() {
     const fetchRecs = async () => {
       try {
         const token = localStorage.getItem('token');
-        const res = await axios.get('${import.meta.env.VITE_API_URL}/api/recommendations', {
+        const res = await axios.get('https://hemanx-multimdal-ai-obit.onrender.com/api/recommendations', {
           headers: { Authorization: `Bearer ${token}` }
         });
         setData(res.data);

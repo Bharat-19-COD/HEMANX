@@ -41,7 +41,7 @@ function TextAnalysis() {
     try {
       const token = localStorage.getItem('token');
       const response = await axios.post(
-        '${import.meta.env.VITE_API_URL}/api/text/analyze',
+        'https://hemanx-multimdal-ai-obit.onrender.com/api/text/analyze',
         { text: combinedText },
         { headers: { Authorization: `Bearer ${token}` } }
       );
