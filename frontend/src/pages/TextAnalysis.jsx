@@ -41,7 +41,7 @@ function TextAnalysis() {
     try {
       const token = localStorage.getItem('token');
       const response = await axios.post(
-        'http://127.0.0.1:5000/api/text/analyze',
+        '${import.meta.env.VITE_API_URL}/api/text/analyze',
         { text: combinedText },
         { headers: { Authorization: `Bearer ${token}` } }
       );

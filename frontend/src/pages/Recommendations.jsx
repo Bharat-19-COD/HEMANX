@@ -21,7 +21,7 @@ function Recommendations() {
     const fetchRecs = async () => {
       try {
         const token = localStorage.getItem('token');
-        const res = await axios.get('http://127.0.0.1:5000/api/recommendations', {
+        const res = await axios.get('${import.meta.env.VITE_API_URL}/api/recommendations', {
           headers: { Authorization: `Bearer ${token}` }
         });
         setData(res.data);
