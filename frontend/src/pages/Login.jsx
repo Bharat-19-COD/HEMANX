@@ -69,7 +69,7 @@ function Login() {
         navigate('/'); // URL se ?mode=register hata kar wapas login pe le aao
       }
     } catch (error) {
-      setMessage({ text: error.response?.data?.error || 'Something went wrong.', type: 'error' });
+      setMessage({ text: (typeof error.response?.data?.error === "object" ? JSON.stringify(error.response.data.error) : error.response?.data?.error) || "Something went wrong.", type: "error" });
     }
   };
 

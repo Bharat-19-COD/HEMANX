@@ -49,7 +49,7 @@ function Settings() {
       setTimeout(() => navigate('/profile'), 1500);
       
     } catch (error) {
-      setMessage({ text: error.response?.data?.error || 'Failed to update profile.', type: 'error' });
+      setMessage({ text: (typeof error.response?.data?.error === "object" ? JSON.stringify(error.response.data.error) : error.response?.data?.error) || "Something went wrong.", type: "error" });
     } finally {
       setLoading(false);
     }
