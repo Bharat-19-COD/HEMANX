@@ -1,0 +1,48 @@
+# ===== Core web framework =====
+Flask==3.0.3
+Werkzeug==3.0.6
+Flask-Cors==4.0.1
+Flask-JWT-Extended==4.6.0
+
+# ===== Database =====
+pymongo==4.9.1
+dnspython==2.7.0
+
+# ===== Validation & config =====
+python-dotenv==1.0.1
+marshmallow==3.22.0
+email-validator==2.2.0
+
+# ===== Security =====
+bcrypt==4.2.0
+
+# ===== ML / CV / Audio (CPU) =====
+numpy==1.26.4
+pandas==2.2.3
+scikit-learn==1.5.2
+Pillow==10.4.0
+opencv-python-headless==4.10.0.84
+
+# PyTorch CPU-only (Windows, no CUDA)
+torch==2.4.1
+torchvision==0.19.1
+
+# Transformers (text emotion)
+transformers==4.44.2
+tokenizers==0.19.1
+safetensors==0.4.5
+huggingface-hub==0.25.1
+
+# Audio (voice emotion)
+librosa==0.10.2.post1
+soundfile==0.12.1
+
+# ===== Utilities =====
+requests==2.32.3
+python-magic-bin==0.4.14
+
+# ===== Testing =====
+pytest==8.3.3
+
+
+gunicorn==21.2.0
